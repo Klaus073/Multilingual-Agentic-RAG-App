@@ -1,0 +1,14 @@
+# OpenAI API Configuration
+OPENAI_API_KEY= KeyHere
+
+# Default Model Configuration (optional)
+DEFAULT_MODEL_NAME=o4-mini
+
+# Ollama Configuration (optional)
+OLLAMA_BASE_URL=http://localhost:11434
+DEFAULT_EMBEDDING_MODEL=bge-m3
+
+# RAG Configuration (optional)
+DEFAULT_BREAKPOINT_THRESHOLD=90
+DEFAULT_BUFFER_SIZE=2
+DEFAULT_TOP_K=20
