@@ -56,6 +56,40 @@ streamlit run streamlit_app.py
    - Click "Process Documents" and wait for indexing to complete
    - Start asking questions!
 
+## Running with Docker
+
+You can run the app using Docker or Docker Compose for easy deployment.
+
+### Build and Run with Docker
+
+```bash
+docker build -t multilingual-rag .
+docker run -p 8501:8501 multilingual-rag
+```
+
+### Using Docker Compose
+
+1. Copy `sample_env` to `.env` and fill in your API keys and settings, or set environment variables directly in your system or compose file.
+2. Start the app:
+
+```bash
+docker-compose up --build
+```
+
+This will build and start the app, exposing it on port 8501.
+
+#### Environment Variables
+- The app requires several environment variables for configuration (see `sample_env`).
+- The repository does not include a `.env` file for security. You must create one by copying `sample_env`:
+
+```bash
+cp sample_env .env
+```
+
+Then edit `.env` to add your OpenAI API key and other settings.
+
+Alternatively, you can set environment variables directly in your Docker Compose file or your system environment.
+
 ## Configuration Options
 
 ### Embedding Models
