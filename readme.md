@@ -19,6 +19,9 @@ A powerful document Q&A system that combines semantic chunking, vector search, a
 ## Installation
 
 1. Clone or download the repository
+```bash
+git clone https://github.com/Klaus073/Multilingual-Agentic-RAG-App.git
+```
 
 2. Install dependencies:
 ```bash
