@@ -90,6 +90,28 @@ Then edit `.env` to add your OpenAI API key and other settings.
 
 Alternatively, you can set environment variables directly in your Docker Compose file or your system environment.
 
+## Editing Environment Variables
+
+To change environment variables for the app running in Docker:
+
+- **Recommended:** Edit your `.env` file or `docker-compose.yml` on your host, then restart the container:
+  ```bash
+  docker-compose down
+  docker-compose up --build
+  ```
+- **Temporary (for testing):** Pass variables at runtime:
+  ```bash
+  docker run -p 8501:8501 -e OLLAMA_BASE_URL=http://<new_ip>:11434 multilingual-rag
+  ```
+- **Inside the container (not persistent):**
+  ```bash
+  docker exec -it multilingual-rag-app /bin/bash
+  export OLLAMA_BASE_URL=http://<new_ip>:11434
+  ```
+  This lasts only until the container stops.
+
+**Best practice:** Edit `.env` or compose file and restart for persistent changes.
+
 ## Configuration Options
 
 ### Embedding Models
